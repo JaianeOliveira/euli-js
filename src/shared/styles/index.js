@@ -8,14 +8,20 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const Text = styled.Text`
-	color: ${(props) => props.theme.text};
+	color: ${(props) => (props.color ? props.color : props.theme.text)};
+	font-size: ${(props) => (props.size ? `${props.size}px` : '14px')};
+	font-weight: ${(props) => (props.bold ? 'bold' : 'normal')};
+	font-style: ${(props) => (props.italic ? 'italic' : 'normal')};
 `;
 
-export const Button = styled.TouchableOpacity`
-	background-color: ${(props) => props.theme.primary};
-	padding: 10px;
+export const Book = styled.TouchableOpacity`
+	width: ${(props) => (props.small ? '94px' : '112px')};
+	height: ${(props) => (props.small ? '119px' : '142px')};
 	border-radius: 5px;
 
-	align-items: center;
-	justify-content: center;
+	background-color: #e5e5e5;
+	background-image: ${(props) => (props.image ? url(props.image) : 'none')};
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 `;

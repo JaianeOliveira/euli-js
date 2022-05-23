@@ -1,14 +1,17 @@
 import React from 'react';
 
-import { Container, Text, Button } from '../../shared/styles';
+import { Container, Text, Book } from '../../shared/styles';
+
+import Button from '../../components/common/Button';
 
 const Home = ({ navigation }) => {
 	return (
 		<Container>
-			<Text>Home</Text>
-			<Button onPress={() => navigation.navigate('login')}>
-				<Text>Back</Text>
-			</Button>
+			<Text bold size={18}>
+				Home
+			</Text>
+			<Book />
+			<Button>Ir</Button>
 		</Container>
 	);
 };
