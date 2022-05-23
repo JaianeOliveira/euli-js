@@ -20,8 +20,9 @@ export const Book = styled.TouchableOpacity`
 	border-radius: 5px;
 
 	background-color: #e5e5e5;
-	background-image: ${(props) => (props.image ? url(props.image) : 'none')};
+	background-image: ${(props) =>
+		props.image ? `url(${props.image})` : 'none'};
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
 `;

@@ -1,18 +1,21 @@
 import React from 'react';
+import { Screen, Space } from './styles';
+import { Text, Book } from '../../shared/styles';
 
-import { Container, Text, Book } from '../../shared/styles';
+import { Button, Carrousel } from '../../components';
 
-import Button from '../../components/common/Button';
+import dummy_data from '../../data/dummy-data';
 
 const Home = ({ navigation }) => {
+	const data = dummy_data[0].books;
 	return (
-		<Container>
+		<Screen>
 			<Text bold size={18}>
-				Home
+				Lendo agora
 			</Text>
-			<Book />
-			<Button>Ir</Button>
-		</Container>
+			<Space />
+			<Carrousel data={data} />
+		</Screen>
 	);
 };
 
