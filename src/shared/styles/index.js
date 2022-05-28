@@ -14,21 +14,38 @@ export const Text = styled.Text`
 	font-weight: ${(props) => (props.bold ? 'bold' : 'normal')};
 	font-style: ${(props) => (props.italic ? 'italic' : 'normal')};
 `;
-
-export const Book = styled.TouchableOpacity`
-	width: ${(props) => (props.small ? '85px' : '94px')};
-	height: ${(props) => (props.small ? '112px' : '142px')};
+export const Book = styled.TouchableOpacity.attrs((props) => ({
+	activeOpacity: 0.8,
+}))`
+	width: ${(props) => {
+		if (props.size === 'small') {
+			return '85px';
+		} else if (props.size === 'large') {
+			return '105px';
+		} else {
+			return '94px';
+		}
+	}};
+	height: ${(props) => {
+		if (props.size === 'small') {
+			return '112px';
+		} else if (props.size === 'large') {
+			return '160px';
+		} else {
+			return '142px';
+		}
+	}};
 	border-radius: 5px;
 
 	overflow: hidden;
 	align-items: center;
 	justify-content: center;
 
-	border: 1px solid ${(props) => props.theme.gray};
+	border: 1px solid transparent;
 
 	background-color: ${(props) => (props.image ? 'transparent' : '#e5e5e5')};
 
 	margin-bottom: ${(props) => (props.margin ? `${screen.height * 0.03}px` : 0)};
 
-	elevation: 1;
+	elevation: 5;
 `;
