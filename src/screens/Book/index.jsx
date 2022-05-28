@@ -7,9 +7,11 @@ import { BookMark, Header } from '../../components';
 import { Screen } from './styles';
 import screen from '../../utils/constants/dimentions';
 import { StatusBar } from 'expo-status-bar';
+import { FAB } from 'react-native-paper';
 
 const Book = ({ route }) => {
 	const user = useAppSelector((state) => state.user);
+	const theme = useAppSelector((state) => state.theme.theme);
 
 	const book = getBook(user.user_id, route.params.bookId);
 	return (
@@ -40,6 +42,17 @@ const Book = ({ route }) => {
 					<Text light>Você ainda não tem nenhuma marcação neste livro...</Text>
 				)}
 			</ScrollView>
+			<FAB
+				style={{
+					position: 'absolute',
+					margin: 16,
+					right: screen.width * 0.03,
+					bottom: screen.height * 0.02,
+					backgroundColor: theme.secondary,
+				}}
+				icon="plus"
+				onPress={() => console.log('Adicionar nota')}
+			/>
 		</Screen>
 	);
 };

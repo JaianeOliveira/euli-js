@@ -16,6 +16,8 @@ import { Carrousel, BookItem, ChangeTheme } from '../../components';
 import { getBooks } from '../../hooks/useData';
 import { useAppSelector } from '../../hooks/useRedux';
 
+import { FAB } from 'react-native-paper';
+
 const Home = ({ navigation }) => {
 	const user = useAppSelector((state) => state.user);
 	const theme = useAppSelector((state) => state.theme.theme);
@@ -62,6 +64,17 @@ const Home = ({ navigation }) => {
 					))}
 				</AllBooksContainer>
 			</ScrollView>
+			<FAB
+				style={{
+					position: 'absolute',
+					margin: 16,
+					right: screen.width * 0.03,
+					bottom: screen.height * 0.02,
+					backgroundColor: theme.secondary,
+				}}
+				icon="plus"
+				onPress={() => console.log('Adicionar livro')}
+			/>
 		</Screen>
 	);
 };
