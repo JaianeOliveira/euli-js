@@ -4,7 +4,8 @@ const darkTheme = {
 	text: '#FFF',
 	primary: '#A374FC',
 	secondary: '#613FA2',
-	gray: '#e5e5e5',
+	gray: '#BFC1C7',
+	darkGray: '#66676B',
 };
 
 export default darkTheme;
