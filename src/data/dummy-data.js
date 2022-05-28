@@ -66,8 +66,8 @@ export default [
 						id: '12614bd4-6a82-4c23-bd44-f30d30b2e7a8',
 						excerpt: null,
 						position: {
-							type: 'POSITION',
-							position: 1234,
+							type: 'PERCENT',
+							position: 12,
 						},
 						comment:
 							'sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore',
@@ -91,8 +91,8 @@ export default [
 						excerpt:
 							'sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus ',
 						position: {
-							type: 'POSITION',
-							position: 1234,
+							type: 'PAGE',
+							position: 550,
 						},
 						comment: null,
 						emotion: 'happy',

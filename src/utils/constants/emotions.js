@@ -5,7 +5,7 @@ export default {
 	},
 	sad: {
 		label: 'Triste',
-		color: '#524573',
+		color: '#BFC1C7',
 	},
 	angry: {
 		label: 'Com Raiva',
@@ -21,10 +21,10 @@ export default {
 	},
 	pish: {
 		label: 'Eca',
-		color: '#A69B11',
+		color: '#469E11',
 	},
 	curious: {
 		label: 'Curioso',
-		color: '#593DF2',
+		color: '#26EBC9',
 	},
 };

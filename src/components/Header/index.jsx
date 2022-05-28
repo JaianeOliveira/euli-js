@@ -1,13 +1,19 @@
-import { View, Text } from 'react-native';
 import React from 'react';
-import { Banner, BookContainer, Title } from './styles';
+import { Banner, BookContainer, Title, TitleContainer } from './styles';
 import BookItem from '../BookItem';
-const Header = ({ title, image, book_id }) => {
+import { Text } from '../../shared/styles';
+
+const Header = ({ title, image, book_id, author }) => {
 	return (
 		<Banner>
-			<Title bold size={18}>
-				{title}
-			</Title>
+			<TitleContainer>
+				<Title bold size={24} color="#FFF">
+					{title}
+				</Title>
+				<Text size={13} light italic color="#FFF">
+					{author}
+				</Text>
+			</TitleContainer>
 			<BookContainer>
 				<BookItem capa={image} size="large" />
 			</BookContainer>

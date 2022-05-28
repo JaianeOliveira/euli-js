@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import screen from '../../utils/constants/dimentions';
+import fonts from '../../utils/constants/fonts';
 
 export const Container = styled.SafeAreaView`
 	flex: 1;
@@ -11,8 +12,30 @@ export const Container = styled.SafeAreaView`
 export const Text = styled.Text`
 	color: ${(props) => (props.color ? props.color : props.theme.text)};
 	font-size: ${(props) => (props.size ? `${props.size}px` : '14px')};
-	font-weight: ${(props) => (props.bold ? 'bold' : 'normal')};
-	font-style: ${(props) => (props.italic ? 'italic' : 'normal')};
+	font-family: ${(props) => {
+		if (props.bold && !props.italic) {
+			return fonts.bold;
+		}
+		if (props.bold && props.italic) {
+			return fonts.bold_italic;
+		}
+		if (props.medium && !props.italic) {
+			return fonts.semiBold;
+		}
+		if (props.medium && props.italic) {
+			return fonts.semiBold_italic;
+		}
+		if (props.light && !props.italic) {
+			return fonts.light;
+		}
+		if (props.light && props.italic) {
+			return fonts.light_italic;
+		}
+		if (!props.bold && !props.light && !props.medium && props.italic) {
+			return fonts.italic;
+		}
+		return fonts.normal;
+	}};
 `;
 export const Book = styled.TouchableOpacity.attrs((props) => ({
 	activeOpacity: 0.8,

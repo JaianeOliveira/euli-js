@@ -15,5 +15,14 @@ export const Container = styled.View`
 	border-radius: 5px;
 	padding: 10px 15px;
 `;
+export const Space = styled.View`
+	height: 12px;
+	width: 100%;
+`;
 
-export const Position = styled(Text).attrs(() => ({}))``;
+export const Emotions = styled.View`
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	margin-top: 5px;
+`;

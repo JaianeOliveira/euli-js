@@ -12,15 +12,19 @@ export const Banner = styled.View`
 	align-items: flex-end;
 	justify-content: space-between;
 
-	padding: ${screen.height * 0.028 + 'px'} ${screen.width * 0.1 + 'px'};
+	padding: ${screen.height * 0.028 + 'px'} ${screen.width * 0.05 + 'px'}
+		${screen.height * 0.015 + 'px'} ${screen.width * 0.05 + 'px'};
 
 	z-index: 1;
 `;
 
 export const BookContainer = styled.View`
-	top: ${screen.height * 0.13 + 'px'};
+	top: ${screen.height * 0.1 + 'px'};
 `;
 
+export const TitleContainer = styled.View`
+	max-width: ${screen.width * 0.55 + 'px'};
+`;
 export const Title = styled(Text)`
-	max-width: ${screen.width * 0.5 + 'px'};
+	margin-bottom: 5px;
 `;
