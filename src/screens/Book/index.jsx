@@ -1,11 +1,16 @@
 import React from 'react';
 
 import { Container, Text } from '../../shared/styles';
+import { useAppSelector } from '../../hooks/useRedux';
+import { getBook } from '../../hooks/useData';
 
-const Book = () => {
+const Book = ({ route }) => {
+	const user = useAppSelector((state) => state.user);
+
+	const book = getBook(user.user_id, route.params.bookId);
 	return (
 		<Container>
-			<Text>Book</Text>
+			<Text>{JSON.stringify(book)}</Text>
 		</Container>
 	);
 };

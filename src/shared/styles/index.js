@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import screen from '../../utils/constants/dimentions';
 
 export const Container = styled.SafeAreaView`
 	flex: 1;
@@ -15,14 +16,19 @@ export const Text = styled.Text`
 `;
 
 export const Book = styled.TouchableOpacity`
-	width: ${(props) => (props.small ? '94px' : '112px')};
-	height: ${(props) => (props.small ? '119px' : '142px')};
+	width: ${(props) => (props.small ? '85px' : '94px')};
+	height: ${(props) => (props.small ? '112px' : '142px')};
 	border-radius: 5px;
 
-	background-color: #e5e5e5;
-	background-image: ${(props) =>
-		props.image ? `url(${props.image})` : 'none'};
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid ${(props) => props.theme.gray};
+
+	background-color: ${(props) => (props.image ? 'transparent' : '#e5e5e5')};
+
+	margin-bottom: ${(props) => (props.margin ? `${screen.height * 0.03}px` : 0)};
+
+	elevation: 1;
 `;

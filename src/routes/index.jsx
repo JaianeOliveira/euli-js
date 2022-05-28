@@ -17,7 +17,20 @@ import { useAppSelector } from '../hooks/useRedux';
 const isAuthenticated = true;
 
 const AuthStack = createNativeStackNavigator();
+const MainStack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
+
+const MainStackRoutes = () => {
+	return (
+		<MainStack.Navigator
+			initialRouteName="home"
+			screenOptions={{ headerShown: false }}
+		>
+			<MainStack.Screen name="home" component={Home} />
+			<MainStack.Screen name="book" component={BookPage} />
+		</MainStack.Navigator>
+	);
+};
 
 const Routes = () => {
 	const theme = useAppSelector((state) => state.theme.theme);
@@ -31,17 +44,18 @@ const Routes = () => {
 						tabBarStyle: {
 							backgroundColor: theme.primary,
 						},
+						tabBarShowLabel: false,
 					}}
 				>
 					<Tabs.Screen
 						name="home"
-						component={Home}
+						component={MainStackRoutes}
 						options={{
 							tabBarIcon: ({ focused, color, size }) => (
 								<Feather
 									name="home"
 									size={24}
-									color={`${focused ? theme.text : theme.backgroundPrimary}`}
+									color={`${focused ? theme.text : theme.secondary}`}
 								/>
 							),
 							tabBarLabel: 'Início',
@@ -52,25 +66,7 @@ const Routes = () => {
 							tabBarInactiveTintColor: theme.backgroundPrimary,
 						}}
 					/>
-					<Tabs.Screen
-						name="book"
-						component={BookPage}
-						options={{
-							tabBarIcon: ({ focused, color, size }) => (
-								<Feather
-									name="heart"
-									size={24}
-									color={`${focused ? theme.text : theme.backgroundPrimary}`}
-								/>
-							),
-							tabBarLabel: 'Livros',
-							tabBarLabelStyle: {
-								fontSize: 16,
-							},
-							tabBarActiveTintColor: theme.text,
-							tabBarInactiveTintColor: theme.backgroundPrimary,
-						}}
-					/>
+
 					<Tabs.Screen
 						name="profile"
 						component={Profile}
@@ -79,7 +75,7 @@ const Routes = () => {
 								<Feather
 									name="user"
 									size={24}
-									color={`${focused ? theme.text : theme.backgroundPrimary}`}
+									color={`${focused ? theme.text : theme.secondary}`}
 								/>
 							),
 							tabBarLabel: 'Perfil',

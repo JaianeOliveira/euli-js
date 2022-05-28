@@ -38,3 +38,22 @@ export const getUser = (user_id) => {
 		data: userData.user_data,
 	};
 };
+
+export const getBook = (user_id, book_id) => {
+	const userData = dummyData.find((user) => user.user_id === user_id);
+	if (!userData)
+		return {
+			status: 404,
+			message: 'Não foi possível obter os dados',
+		};
+
+	const book = userData.books.find((book) => book.id === book_id);
+
+	if (!book)
+		return {
+			status: 404,
+			message: 'Livro não encontrado',
+		};
+
+	return book;
+};
