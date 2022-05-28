@@ -13,6 +13,8 @@ export const Banner = styled.View`
 	justify-content: space-between;
 
 	padding: ${screen.height * 0.028 + 'px'} ${screen.width * 0.1 + 'px'};
+
+	z-index: 1;
 `;
 
 export const BookContainer = styled.View`

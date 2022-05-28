@@ -28,116 +28,79 @@ export default [
 				author: 'Matt Haig',
 				capa: 'https://images-na.ssl-images-amazon.com/images/I/51kAYMwbQIL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
 				status: 'READ',
-				bookmarks: [
-					{
-						id: '9f8ac639-c02a-46fe-aeec-37de78035fc0',
-						excerpt: null,
-						position: {
-							type: 'POSITION',
-							position: 1234,
-						},
-						comment: null,
-					},
-				],
+				bookmarks: [],
 			},
-			{
-				id: 'dc910f1e-99d7-454d-ad04-558a8a14c7af',
-				title: 'A biblioteca da Meia Noite',
-				author: 'Matt Haig',
-				capa: 'https://images-na.ssl-images-amazon.com/images/I/51kAYMwbQIL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
-				status: 'READ',
-				bookmarks: [
-					{
-						id: '9f8ac639-c02a-46fe-aeec-37de78035fc0',
-						excerpt: null,
-						position: {
-							type: 'POSITION',
-							position: 1234,
-						},
-						comment: null,
-						feeling: 'surprise',
-						emoji: '😨',
-					},
-				],
-			},
-			{
-				id: 'dc910f1e-99d7-454d-ad04-558a8a14c7af',
-				title: 'A biblioteca da Meia Noite',
-				author: 'Matt Haig',
-				capa: 'https://images-na.ssl-images-amazon.com/images/I/51kAYMwbQIL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
-				status: 'READ',
-				bookmarks: [
-					{
-						id: '9f8ac639-c02a-46fe-aeec-37de78035fc0',
-						excerpt: null,
-						position: {
-							type: 'POSITION',
-							position: 1234,
-						},
-						comment: null,
-						emotion: 'surprise',
-						emoji: '😨',
-					},
-				],
-			},
-			{
-				id: 'dc910f1e-99d7-454d-ad04-558a8a14c7af',
-				title: 'A biblioteca da Meia Noite',
-				author: 'Matt Haig',
-				capa: 'https://images-na.ssl-images-amazon.com/images/I/51kAYMwbQIL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
-				status: 'READ',
-				bookmarks: [
-					{
-						id: '9f8ac639-c02a-46fe-aeec-37de78035fc0',
-						excerpt: null,
-						position: {
-							type: 'POSITION',
-							position: 1234,
-						},
-						comment: null,
-					},
-				],
-			},
+
 			{
 				id: '80ce2246-ab10-4490-a898-b07891b85b93',
 				title: 'A viajante do tempo',
 				author: 'Diana Gabaldon',
 				capa: 'https://images-na.ssl-images-amazon.com/images/I/51Xyr1ziTEL._SX346_BO1,204,203,200_.jpg',
 				status: 'READING',
-				bookmarks: [],
+				bookmarks: [
+					{
+						id: '9f8ac639-c02a-46fe-aeec-37de78035fc0',
+						excerpt:
+							'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has ',
+						position: {
+							type: 'POSITION',
+							position: 1234,
+						},
+						comment: 'packages and web page editors',
+						emotion: 'happy',
+						emoji: '🥳',
+					},
+					{
+						id: '9adee9c0-e276-4db9-8ec5-854825e23cae',
+						excerpt:
+							'ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor',
+						position: {
+							type: 'POSITION',
+							position: 1234,
+						},
+						comment: null,
+						emotion: 'love',
+						emoji: null,
+					},
+					{
+						id: '12614bd4-6a82-4c23-bd44-f30d30b2e7a8',
+						excerpt: null,
+						position: {
+							type: 'POSITION',
+							position: 1234,
+						},
+						comment:
+							'sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore',
+						emotion: 'sad',
+						emoji: '😣',
+					},
+					{
+						id: '1271e3d4-5bb7-4a1f-bea7-18c7a7363587',
+						excerpt: 'account of the system, and exp',
+						position: {
+							type: 'POSITION',
+							position: 1234,
+						},
+						comment:
+							'ences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur i',
+						emotion: 'happy',
+						emoji: '🥳',
+					},
+					{
+						id: 'eac061e6-7bee-488e-aa42-3ebad4cfa2ea',
+						excerpt:
+							'sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus ',
+						position: {
+							type: 'POSITION',
+							position: 1234,
+						},
+						comment: null,
+						emotion: 'happy',
+						emoji: '🥳',
+					},
+				],
 			},
-			{
-				id: '80ce2246-ab10-4490-a898-b07891b85b93',
-				title: 'A viajante do tempo',
-				author: 'Diana Gabaldon',
-				capa: 'https://images-na.ssl-images-amazon.com/images/I/51Xyr1ziTEL._SX346_BO1,204,203,200_.jpg',
-				status: 'READING',
-				bookmarks: [],
-			},
-			{
-				id: '80ce2246-ab10-4490-a898-b07891b85b93',
-				title: 'A viajante do tempo',
-				author: 'Diana Gabaldon',
-				capa: 'https://images-na.ssl-images-amazon.com/images/I/51Xyr1ziTEL._SX346_BO1,204,203,200_.jpg',
-				status: 'READING',
-				bookmarks: [],
-			},
-			{
-				id: 'aeca7e70-3d43-4820-aa83-466b1aba680c',
-				title: 'Torre do Alvorecer',
-				author: 'Sarah J. Maas',
-				capa: 'https://images-na.ssl-images-amazon.com/images/I/51fMabcuUwL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
-				status: 'READING',
-				bookmarks: [],
-			},
-			{
-				id: 'aeca7e70-3d43-4820-aa83-466b1aba680c',
-				title: 'Torre do Alvorecer',
-				author: 'Sarah J. Maas',
-				capa: 'https://images-na.ssl-images-amazon.com/images/I/51fMabcuUwL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
-				status: 'READING',
-				bookmarks: [],
-			},
+
 			{
 				id: 'aeca7e70-3d43-4820-aa83-466b1aba680c',
 				title: 'Torre do Alvorecer',
